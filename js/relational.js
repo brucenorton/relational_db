@@ -124,16 +124,13 @@ let movieExists = false;
 
 /** insert section  **/
   //inserting into 3 tables, movies, genres & favourites
-  
 
   function getFormData(event){
     event.preventDefault();
 
     //get the form data & call an async function
     const insertFormData = new FormData(document.querySelector('#input-form'));
-
     url = 'app/insert_favourite.php';
-    
     inserter(insertFormData, url);
   }
 
