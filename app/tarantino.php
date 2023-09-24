@@ -5,10 +5,10 @@
   //prepare the statement passing the db $link and the SQL
   /* ADDED "'ORDER BY' timestamp DESC" at the end of the query for reverse, chronological order */
   $stmt = mysqli_prepare($link, 
-  "SELECT *
-  FROM tarantino_movies, tarantino_actors
-  WHERE tarantino_movies.actorID = tarantino_actors.actorID
-  ");
+    "SELECT *
+    FROM tarantino_movies, tarantino_actors
+    WHERE tarantino_movies.actorID = tarantino_actors.actorID"
+  );
 
   //execute the statement / query from abobe
   mysqli_stmt_execute($stmt);
