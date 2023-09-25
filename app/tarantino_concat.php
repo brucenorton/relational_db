@@ -24,6 +24,7 @@
             WHERE tarantino_linker.actorID = tarantino_actors.actorID
             AND tarantino_linker.movieID = tarantino_movies.movieID";
   */
+
   $stmt = mysqli_prepare($link, $query);
 
   //execute the statement / query from abobe

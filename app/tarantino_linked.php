@@ -21,6 +21,7 @@
   //loop through
   while($row = mysqli_fetch_assoc($result)){
     $movie_title = $row['movie'];
+    
     if(!isset($results[$movie_title])){
       $results[$movie_title] = [
         'movie' => $row['movie'],
@@ -33,6 +34,8 @@
       'birthYear' => $row['birthYear'],
       'biography' => $row['biography']
     ];
+    /* this gives a row for each movie */
+    //$results[]=$row;l
   }
 
   //encode & display json
